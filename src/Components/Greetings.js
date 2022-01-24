@@ -4,16 +4,14 @@ import {getThings} from '../redux/configureStore'
 
 function Greetings() {
   const dispatch = useDispatch();
-  const greetings = useSelector((state) => state.greetingsReducer);
-  console.log('Greetings:', greetings);
+  const greeting = useSelector((state) => state.greetingsReducer);
+  console.log('Greetings:', greeting);
   return (
     <div>
       <button onClick={() => dispatch(getThings())}>
         Get Greetings from the backend
       </button>
-      {greetings.map((greet) => {
-        return <h1 key={greet.id}>{greet.message}</h1>;
-      })}
+      <h1 key={greeting.id}>{greeting.message}</h1>
     </div>
   );
 }
