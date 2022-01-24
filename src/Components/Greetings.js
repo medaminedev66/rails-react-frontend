@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
 function Greetings() {
     return (<h1>Greetings</h1>);
