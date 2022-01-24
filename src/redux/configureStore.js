@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-const initialState = { greetings: [{ id: 1, greet: 'Hello' }] };
+const initialState = [{ id: 1, message: 'Hello' }];
 const GET_GREETINGS_REQUEST = 'GET_GREETINGS_REQUEST';
 
 export const getThings = () => {
